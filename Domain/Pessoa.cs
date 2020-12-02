@@ -3,15 +3,14 @@ using System.Linq;
 
 namespace Domain
 {
-    public class User
+    public abstract class Pessoa : Entidade
     {
-        public Guid Id { get; set; } = new Guid();
-        public string Nome { get; set; }
+        public string Nome { get; protected set; }
         public DateTime DataNascimento { get; set; }
         public string Email { get; set; }
         public int Telefone { get; set; }
 
-        public void Registrar(string nome, DateTime dataNascimento, string email, int telefone)
+        protected Pessoa(string nome, DateTime dataNascimento, string email, int telefone)
         {
             Nome = nome;
             DataNascimento = dataNascimento;
