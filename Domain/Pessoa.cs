@@ -8,9 +8,9 @@ namespace Domain
         public string Nome { get; protected set; }
         public DateTime DataNascimento { get; set; }
         public string Email { get; set; }
-        public int Telefone { get; set; }
+        public long Telefone { get; set; }
 
-        protected Pessoa(string nome, DateTime dataNascimento, string email, int telefone)
+        public Pessoa(string nome, DateTime dataNascimento, string email, long telefone)
         {
             Nome = nome;
             DataNascimento = dataNascimento;
